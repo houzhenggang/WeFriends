@@ -101,10 +101,17 @@ public class Runner extends UiAutomatorTestCase {
 				System.out.println("");
 				SendGreeting.click();
 				// shift metastate=1 public boolean pressKeyCode(int keyCode,
-				// int metaState)
-				device.pressKeyCode(KeyEvent.KEYCODE_H, 1);
-				device.pressKeyCode(KeyEvent.KEYCODE_I);
+				// int metaState) ShuangPin Mode
+				device.pressKeyCode(KeyEvent.KEYCODE_H);
+				device.pressKeyCode(KeyEvent.KEYCODE_A);
+				device.pressKeyCode(KeyEvent.KEYCODE_L);
+				device.pressKeyCode(KeyEvent.KEYCODE_B);
 				device.pressKeyCode(KeyEvent.KEYCODE_COMMA);
+				device.pressKeyCode(KeyEvent.KEYCODE_N);
+				device.pressKeyCode(KeyEvent.KEYCODE_I);
+				device.pressKeyCode(KeyEvent.KEYCODE_H);
+				device.pressKeyCode(KeyEvent.KEYCODE_K);
+				
 				device.pressKeyCode(KeyEvent.KEYCODE_AT);
 				device.pressKeyCode(KeyEvent.KEYCODE_AT);
 
