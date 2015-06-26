@@ -1,2 +1,2 @@
-C:\Users\chenguangjian\ADTworkspace\wefriends\bin\classes.dex : \
-C:\Users\chenguangjian\ADTworkspace\wefriends\bin\classes\wefriends\runner\Runner.class \
+/Users/jack/tools/wefriends/bin/classes.dex : \
+/Users/jack/tools/wefriends/bin/classes/wefriends/runner/Runner.class \

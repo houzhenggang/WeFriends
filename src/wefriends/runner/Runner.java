@@ -13,27 +13,37 @@ import com.android.uiautomator.testrunner.UiAutomatorTestCase;
  * @author chenguangjian
  */
 public class Runner extends UiAutomatorTestCase {
-	public void testDemo() throws UiObjectNotFoundException, RemoteException {
+	public void testDemo() {
 		UiDevice device = getUiDevice();
 
-		if (!device.isScreenOn()) {
-			// wake up the screen
-			System.out.println("wake up the screen");
-			try {
-				device.wakeUp();
-			} catch (RemoteException e1) {
-				e1.printStackTrace();
+		try {
+			if (!device.isScreenOn()) {
+				// wake up the screen
+				System.out.println("wake up the screen");
+				try {
+					device.wakeUp();
+				} catch (RemoteException e1) {
+					e1.printStackTrace();
+				}
+				// swipe to unlock the screen
+				System.out.println("swipe to unlock the screen");
+				device.swipe(360, 1000, 700, 1000, 1);
 			}
-			// swipe to unlock the screen
-			System.out.println("swipe to unlock the screen");
-			device.swipe(360, 1000, 700, 1000, 1);
+		} catch (RemoteException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
 		}
 
 		device.pressHome();
 
 		UiObject WeChat = new UiObject(new UiSelector().text("WeChat"));
 		System.out.println("Start WeChat ... ");
-		WeChat.click();
+		try {
+			WeChat.click();
+		} catch (UiObjectNotFoundException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 
 		try {
 			Thread.sleep(5000);
@@ -43,12 +53,22 @@ public class Runner extends UiAutomatorTestCase {
 
 		UiObject Discover = new UiObject(new UiSelector().text("Discover"));
 		System.out.println("click Discover");
-		Discover.click();
+		try {
+			Discover.click();
+		} catch (UiObjectNotFoundException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 
 		UiObject PeopleNearby = new UiObject(
 				new UiSelector().text("People Nearby"));
 		System.out.println("People Nearby");
-		PeopleNearby.click();
+		try {
+			PeopleNearby.click();
+		} catch (UiObjectNotFoundException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 
 		try {
 			Thread.sleep(5000);
@@ -84,7 +104,12 @@ public class Runner extends UiAutomatorTestCase {
 			UiSelector ui = new UiSelector();
 			if (ui.textContains("Send Greeting") != null) {
 
-				sendGreeting(device);
+				try {
+					sendGreeting(device);
+				} catch (UiObjectNotFoundException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 
 				try {
 					Thread.sleep(3000);

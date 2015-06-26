@@ -4,6 +4,8 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.7.0_75"/>
 	<classpathentry kind="lib" path="F:/test-pro/soft/adt-bundle-windows-x86_64-20140321/sdk/platforms/android-19/android.jar"/>
 	<classpathentry kind="lib" path="F:/test-pro/soft/adt-bundle-windows-x86_64-20140321/sdk/platforms/android-19/uiautomator.jar"/>
+	<classpathentry kind="lib" path="/Users/jack/soft/adt-bundle-mac-x86_64-20140321/sdk/platforms/android-19/android.jar" sourcepath="/Users/jack/soft/adt-bundle-mac-x86_64-20140321/sdk/platforms/android-19/android-19"/>
+	<classpathentry kind="lib" path="/Users/jack/soft/adt-bundle-mac-x86_64-20140321/sdk/platforms/android-19/uiautomator.jar" sourcepath="/Users/jack/soft/adt-bundle-mac-x86_64-20140321/sdk/platforms/android-19/uiautomator"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
